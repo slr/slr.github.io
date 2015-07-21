@@ -4,3 +4,11 @@ gems:
 excerpt_separator: <!--lurk-->
 
 permalink: /:year/:month/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
