@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru,en,es">
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="language" content="ru,en,es">
+  <meta http-equiv="rating" content="general">
+  <meta http-equiv="revisit-after" content="3 days">
   <meta charset="utf-8">
   <title>{{ site.name }}: {{ page.title }}</title>
   <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" type="text/css" href="m.css">
 <script>
 var locStor = function () {};
 
@@ -108,8 +113,6 @@ function init() {
   opt.add('lang', 'auto');
 
   var langSelect = document.getElementById('langSelect');
-  langSelect.style.position = 'absolute';
-  langSelect.style.right = '23px';
   for (var i = 0; i < langList.length; i++) {
     c = document.getElementsByClassName(langList[i]);
     if (c.length) {
@@ -136,3 +139,4 @@ function init() {
 </head>
 <body onload="init();" style="display: none;">
 <div id="langSelect" lang='en'></div>
+<div id="mc">
