@@ -1,2 +1,10 @@
+</div>
+{% if page.tags.size > 0 %}
+<div id="tags">tags: 
+{% for tag in page.tags %}
+<i>{{ tag }}</i>{% if tag != page.tags.last %}, {% endif %}
+{% endfor %}
+</div>
+{% endif %}
 </body>
 </html>
