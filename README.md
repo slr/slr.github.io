@@ -2,7 +2,7 @@
 
 I'm in process of moving of [my living dead blog](http://scary.tasty.sexy) from Blogger to here.
 
-later DNS records of course will be tuned to get data here and pages will be redirected right way with 
+later DNS records of course will be tuned to take bytes from here and pages will be redirected right way with 
 [Jekyll's module](https://github.com/jekyll/jekyll-redirect-from).
 
 currently only [first post](http://slr.github.io/2013/07/point/) is working. but now it's available in English too.
