@@ -1,0 +1,34 @@
+a {
+  color: #009EB8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E06666;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #BF9000;
+}
+
+h1 {
+  margin-left: -3%;
+}
+
+#mc {
+  margin: 2% 17%;
+}
+
+#langSelect {
+  position: absolute;
+  right: 2%;
+}
+
+#tags {
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+}
