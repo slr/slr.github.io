@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>{{ site.name }}</title>
+  <title>{{ site.name }}: {{ page.title }}</title>
   <meta name="description" content="{{ site.description }}">
 <script>
 var locStor = function () {};
@@ -129,8 +129,9 @@ function init() {
     langSelect.style.display = 'none';
 
   pageLang();
+
+  document.body.style.display = 'block';
 };
 </script>
 </head>
-<body onload="init();">
-<div id="langSelect" lang='en'></div>
+<body onload="init();" style="display: none;">
