@@ -8,14 +8,14 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #BF9000;
+}
+
 a:hover {
   color: #E06666;
   text-decoration: underline;
   cursor: pointer;
-}
-
-a:visited {
-  color: #BF9000;
 }
 
 h1 {
