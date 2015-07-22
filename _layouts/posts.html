@@ -2,7 +2,6 @@
 <h1>{{ page.title }}</h1>
 {{ content }}
 {% if page.tags.size > 0 %}
-<br>
 <p class="tags">tags: 
 {% for tag in page.tags %}
 <i>{{ tag }}</i>{% if tag != page.tags.last %}, {% endif %}
