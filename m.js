@@ -52,7 +52,7 @@ var opt = new options();
 var langList = ['en','es','ru'];
 
 function pageLang() {
-  var l;
+  var i, j, c, l;
 
   if (arguments.length > 0) {
     l = opt.set('lang', arguments[0]);
@@ -69,28 +69,28 @@ function pageLang() {
         l = opt.lang.v;
   }
 
-  var c = document.getElementsByClassName(l);
+  c = document.getElementsByClassName(l);
   if (c.length) {
-    for (var j = 0; j < c.length; j++)
+    for (j = 0; j < c.length; j++)
       c[j].style.display = 'block';
-    for (var i = 0; i < langList.length; i++) {
+    for (i = 0; i < langList.length; i++) {
       if (langList[i] !== l) {
-        var c = document.getElementsByClassName(langList[i]);
-        for (var j = 0; j < c.length; j++)
+        c = document.getElementsByClassName(langList[i]);
+        for (j = 0; j < c.length; j++)
           c[j].style.display = 'none';
       }
     }
   } else {
     l = '';
-    for (var i = 0; i < langList.length; i++) {
-      var c = document.getElementsByClassName(langList[i]);
+    for (i = 0; i < langList.length; i++) {
+      c = document.getElementsByClassName(langList[i]);
       if (!l && c.length)
         l = langList[i];
       if (langList[i] === l) {
-        for (var j = 0; j < c.length; j++)
+        for (j = 0; j < c.length; j++)
           c[j].style.display = 'block';
       } else {
-        for (var j = 0; j < c.length; j++)
+        for (j = 0; j < c.length; j++)
           c[j].style.display = 'none';
       }
     }
@@ -98,17 +98,19 @@ function pageLang() {
 }
 
 function init() {
+  var i, j, c;
+
   opt.add('lang', 'auto');
 
   var langSelect = document.getElementById('langSelect');
-  for (var i = 0; i < langList.length; i++) {
+  for (i = 0; i < langList.length; i++) {
     c = document.getElementsByClassName(langList[i]);
     if (c.length) {
-      for (var j = 0; j < c.length; j++)
+      for (j = 0; j < c.length; j++)
         c[j].lang = langList[i];
       c = document.createElement('A');
       c.textContent = langList[i];
-      c.setAttribute('href', 'javascript:pageLang(\'' + langList[i] + '\');');
+      c.setAttribute('onclick', 'javascript:pageLang(\'' + langList[i] + '\');');
       c.style.margin = '4px';
       langSelect.appendChild(c);
     } else {
