@@ -52,9 +52,11 @@ var opt = new options();
 var langList = ['en','es','ru'];
 
 function pageBye() {
-  var c = document.getElementById('bye');
-  c.style.display = 'block';
-  document.body.innerHTML = c;
+  var c = document.body.children;
+  for (var i = 0; i < c.length; i++)
+    c[i].style.display = 'none';
+
+  document.getElementById('bye').style.display = 'block';
 }
 
 function pageLang() {
