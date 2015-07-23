@@ -28,15 +28,22 @@ h1 {
 }
 
 #bye {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 48%;
-  width: 20%;
-  margin: 0 40%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+#bbye {
+  width: 50%;
   text-align: center;
 }
 
-#bye p:after {
+#bbye p:after {
   content: "…";
 }
 
