@@ -106,7 +106,8 @@ function init() {
 
   c = document.getElementsByTagName('A');
   for (i = 0; i < c.length; i++) {
-    if (c[i].href.length > 1 && c[i].href.indexOf(document.domain) === -1)
+    if (c[i].href.length > 1 && (c[i].href.indexOf(document.domain) === -1
+      || c[i].href.slice(0, 23) === 'https://github.com/slr/'))  // FIXME temp
       c[i].setAttribute('onclick', 'pageBye();');
   }
 
