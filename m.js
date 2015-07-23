@@ -51,6 +51,12 @@ options.prototype.set = function (name, v) {
 var opt = new options();
 var langList = ['en','es','ru'];
 
+function pageBye() {
+  var c = document.getElementById('bye');
+  c.style.display = 'block';
+  document.body.innerHTML = c;
+}
+
 function pageLang() {
   var i, j, c, l;
 
@@ -99,6 +105,12 @@ function pageLang() {
 
 function init() {
   var i, j, c;
+
+  c = document.getElementsByTagName('A');
+  for (i = 0; i < c.length; i++) {
+    if (c[i].href.length > 1 && c[i].href.indexOf(document.domain) === -1)
+      c[i].setAttribute('onclick', 'javascript:pageBye();');
+  }
 
   opt.add('lang', 'auto');
 
