@@ -44,8 +44,16 @@ h1 {
   text-align: center;
 }
 
-#bbye p:after {
-  content: "…";
+#bbye p {
+  margin: 1%;
+}
+
+#bbye .bbgl {
+  padding-right: 6%;
+}
+
+#bbye .bbcu {
+  padding-left: 6%;
 }
 
 #mc {
