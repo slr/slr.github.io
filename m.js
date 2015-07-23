@@ -52,11 +52,7 @@ var opt = new options();
 var langList = ['en','es','ru'];
 
 function pageBye() {
-  var c = document.body.children;
-  for (var i = 0; i < c.length; i++)
-    c[i].style.display = 'none';
-
-  document.getElementById('bye').style.display = 'block';
+  document.getElementById('bye').style.display = arguments[0] === false ? 'none' : 'block';
 }
 
 function pageLang() {
@@ -111,7 +107,7 @@ function init() {
   c = document.getElementsByTagName('A');
   for (i = 0; i < c.length; i++) {
     if (c[i].href.length > 1 && c[i].href.indexOf(document.domain) === -1)
-      c[i].setAttribute('onclick', 'javascript:pageBye();');
+      c[i].setAttribute('onclick', 'pageBye();');
   }
 
   opt.add('lang', 'auto');
@@ -124,7 +120,7 @@ function init() {
         c[j].lang = langList[i];
       c = document.createElement('A');
       c.textContent = langList[i];
-      c.setAttribute('onclick', 'javascript:pageLang(\'' + langList[i] + '\');');
+      c.setAttribute('onclick', 'pageLang(\'' + langList[i] + '\');');
       c.style.margin = '4px';
       langSelect.appendChild(c);
     } else {
@@ -136,6 +132,8 @@ function init() {
     langSelect.style.display = 'none';
 
   pageLang();
+
+  document.body.setAttribute('onpageshow', 'pageBye(false);');
 
   document.body.style.display = 'block';
 };
