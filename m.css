@@ -22,13 +22,26 @@ h1 {
   margin-left: -3%;
 }
 
-#mc {
-  margin: 2% 17%;
-}
-
 #langSelect {
   position: absolute;
   right: 2%;
+}
+
+#bye {
+  display: none;
+  position: absolute;
+  top: 48%;
+  width: 20%;
+  margin: 0 40%;
+  text-align: center;
+}
+
+#bye p:after {
+  content: "…";
+}
+
+#mc {
+  margin: 2% 17%;
 }
 
 #tags {
