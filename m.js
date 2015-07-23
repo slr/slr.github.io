@@ -123,13 +123,14 @@ function init() {
       c.setAttribute('onclick', 'pageLang(\'' + langList[i] + '\');');
       c.style.margin = '4px';
       langSelect.appendChild(c);
-    } else {
-      langList.splice(i, 1);
-      i--;
     }
   }
-  if (langSelect.children.length < 2)
-    langSelect.style.display = 'none';
+
+  c = document.getElementById('mc');
+  for (i = 0; i < langList.length; i++) {
+    if (c.getElementsByClassName(langList[i]).length === 0)
+      c.appendChild(document.getElementById('temp-no-lang').getElementsByClassName(langList[i])[0]);
+  }
 
   pageLang();
 
