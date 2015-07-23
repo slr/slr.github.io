@@ -49,11 +49,12 @@ h1 {
 }
 
 #bbye .bbgl {
-  padding-right: 6%;
+  padding-right: 8%;
+  color: #E06666;
 }
 
 #bbye .bbcu {
-  padding-left: 6%;
+  padding-left: 8%;
 }
 
 #mc {
