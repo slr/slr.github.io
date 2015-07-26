@@ -22,6 +22,10 @@ h1 {
   margin-left: -3%;
 }
 
+.cs {
+  text-decoration: line-through;
+}
+
 #langSelect {
   position: absolute;
   right: 2%;
