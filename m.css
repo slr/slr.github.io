@@ -62,9 +62,20 @@ h1 {
 }
 
 #tags {
-  position: absolute;
-  bottom: 1%;
+  position: abso
   width: 54%;
-  margin: 0 23%;
+  margin: 1% 23%;
   text-align: center;
+}
+
+#tags {
+  position: relative;
+  width: 54%;
+  margin: 1% 23%;
+  text-align: center;
+}
+
+#tags.gd {
+  position: absolute;
+  bottom: 0;
 }

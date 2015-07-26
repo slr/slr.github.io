@@ -99,6 +99,16 @@ function pageLang() {
       }
     }
   }
+
+  pageRedo();
+}
+
+function pageRedo() {
+  c = document.getElementById('tags');
+  if (document.body.scrollHeight < window.innerHeight)
+    c.classList.add('gd');
+  else
+    c.classList.remove('gd');
 }
 
 function init() {
@@ -133,9 +143,9 @@ function init() {
       c.appendChild(document.getElementById('temp-no-lang').getElementsByClassName(langList[i])[0]);
   }
 
-  pageLang();
-
   document.body.setAttribute('onpageshow', 'pageBye(false);');
 
   document.body.style.display = 'block';
+
+  pageLang();
 };
