@@ -113,7 +113,7 @@ function pageLang() {
 
 function pageRedo() {
   c = document.getElementById('tags');
-  if (document.body.scrollHeight < window.innerHeight)
+  if (getHeight(document.body) + getHeight(c) < window.innerHeight)
     c.classList.add('gd');
   else
     c.classList.remove('gd');
