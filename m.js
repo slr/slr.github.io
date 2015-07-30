@@ -1,3 +1,11 @@
+function getHeight(el) {
+  el = (typeof el === 'string') ? document.querySelector(el) : el;
+
+  var style = window.getComputedStyle(el);
+
+  return el.offsetHeight + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+}
+
 var locStor = function () {};
 
 locStor.prototype.set = function () {
