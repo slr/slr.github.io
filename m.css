@@ -19,7 +19,13 @@ a:hover {
 }
 
 h1 {
+  font-size: xx-large;
   margin-left: -3%;
+}
+
+h2 {
+  color: #404;
+  font-size: large;
 }
 
 .cs {
