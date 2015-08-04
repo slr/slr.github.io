@@ -36,6 +36,11 @@ h2 {
   text-decoration: line-through;
 }
 
+.qt {
+	font-style: italic;
+	padding-left: 2%;
+}
+
 .vid {
 	text-align: center;
 }
