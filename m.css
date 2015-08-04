@@ -18,6 +18,10 @@ a:hover {
   cursor: pointer;
 }
 
+a img {
+  margin: 1%;
+}
+
 h1 {
   font-size: xx-large;
   margin-left: -3%;
@@ -26,6 +30,10 @@ h1 {
 h2 {
   color: #404;
   font-size: large;
+}
+
+img {
+  border-style: none;
 }
 
 .cntrd {
