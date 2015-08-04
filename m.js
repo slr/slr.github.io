@@ -60,7 +60,17 @@ var opt = new options();
 var langList = ['en','es','ru'];
 
 function pageBye() {
-  document.getElementById('bye').style.display = arguments[0] === false ? 'none' : 'flex';
+  var c = document.getElementById('bye');
+
+  if (arguments[0] === false)
+    document.body.style.overflowY = 'auto';
+    c.style.display = 'none';
+  else {
+    document.body.style.overflowY = 'hidden';
+    c.style.display = 'flex';
+    c.style.top = window.pageYOffset + 'px';
+    c.style.height = window.innerHeight + 'px';
+  }
 }
 
 function pageLang() {
