@@ -62,10 +62,10 @@ var langList = ['en','es','ru'];
 function pageBye() {
   var c = document.getElementById('bye');
 
-  if (arguments[0] === false)
+  if (arguments[0] === false) {
     document.body.style.overflowY = 'auto';
     c.style.display = 'none';
-  else {
+  } else {
     document.body.style.overflowY = 'hidden';
     c.style.display = 'flex';
     c.style.top = window.pageYOffset + 'px';
