@@ -45,8 +45,17 @@ img {
 }
 
 .qt {
-	font-style: italic;
-	padding-left: 2%;
+  color: #777;
+  font-style: italic;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-left: 2.3%;
+  padding-right: 2.3%;
+}
+
+.qt p {
+  margin-top: 1.23%;
+  margin-bottom: 1.23%;
 }
 
 .vid {
