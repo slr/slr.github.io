@@ -28,6 +28,10 @@ h2 {
   font-size: large;
 }
 
+.cntrd {
+	text-align: center;
+}
+
 .cs {
   text-decoration: line-through;
 }
