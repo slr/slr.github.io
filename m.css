@@ -45,6 +45,12 @@ img {
   text-decoration: line-through;
 }
 
+.dt {
+  font-size: small;
+  text-align: right;
+  margin-right: -2%;
+}
+
 .pl {
   list-style-type: none;
 }
