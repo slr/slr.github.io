@@ -1,11 +1,10 @@
 # HEY THERE!
 
-I'm in process of moving of [my living dead blog](http://scary.tasty.sexy) from Blogger to here.
+[my living dead blog](http://scary.tasty.sexy) was moved from Blogger here recently.
 
-later DNS records of course will be tuned to take bytes from here and pages will be redirected right way with 
-[Jekyll's module](https://github.com/jekyll/jekyll-redirect-from).
+## ALL SYSTEMS NOMINAL
 
-currently only [first post](http://slr.github.io/2013/07/point/) is working. but now it's available in English too.
+or it's going to be.
 
 I want to have most of my stuff in English, Spanish and Russian.
 so I did some mechanism to select language from ones which available on the page.
