@@ -49,6 +49,10 @@ img {
   list-style-type: none;
 }
 
+.pl div {
+  padding-left: 2.3%;
+}
+
 .qt {
   color: #777;
   font-style: italic;
