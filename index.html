@@ -3,12 +3,12 @@ title: index page
 ---
 {% include header.html %}
 <h1>{{ site.name }}</h1>
-<ul>
+<ul class="pl">
 {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    {{ post.excerpt }}
-  </li>
+<li>
+<h2><a href="{{ post.url }}">{{ post.title }}</a><h2>
+{{ post.excerpt }}
+</li>
 {% endfor %}
 </ul>
 {% include footer.html %}
