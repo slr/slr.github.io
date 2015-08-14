@@ -1,6 +1,8 @@
 gems:
   - jekyll-redirect-from
 
+name: дорога хороша
+
 excerpt_separator: <!--lurk-->
 
 permalink: /:year/:month/:title
