@@ -1,6 +1,8 @@
 function getHeight(el) {
   el = (typeof el === 'string') ? document.querySelector(el) : el;
 
+  if (el === null) return;
+
   var style = window.getComputedStyle(el);
 
   return el.offsetHeight + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
