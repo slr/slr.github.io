@@ -55,6 +55,10 @@ img {
   margin-right: -2%;
 }
 
+.hdn {
+  display: none;
+}
+
 .pl {
   list-style-type: none;
 }
