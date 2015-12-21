@@ -6,6 +6,19 @@ function getHeight(el) {
   return el.offsetHeight + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
 }
 
+function shoh(el, d) {
+  if (typeof el === 'object' && el.length) {
+    for (var i = 0; i < el.length; i++)
+      shoh(el[i], d);
+    return;
+  }
+
+  el = (typeof el === 'string') ? document.querySelector(el) : el;
+
+  if (el !== null)
+    el.style.display = (el.style.display === 'none') ? d ? d : 'block' : 'none';
+}
+
 var locStor = function () {};
 
 locStor.prototype.set = function () {
