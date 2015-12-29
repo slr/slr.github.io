@@ -72,28 +72,35 @@ eval(pageRedo.toString().replace(/\(\)\s*\{/, '(){\n'
 
 opt.add('timer', 0);
 
-if (opt.timer.v !== 0)
+if (opt.timer.v.last > 0 && opt.timer.v.left > 0) {
+  tickTimer();
+
   shoh(['#how-old-now', '#how-old-end', '#timer-options', '#get-out']);
-else
+} else
   shoh(['#how-old-end', '#timer', '#timer-options', '#get-out']);
 
 var timer = setInterval(tickTimer, 1000);
 
 function setTimer() {
-  var d = new Date(), t = d.getTime();
+  var d = new Date(), t = Math.floor(d.getTime() / 1000);
 
   d.setFullYear(d.getFullYear() + yearsEnd - yearsNow);
-  opt.set('timer', Math.floor((d.getTime() - t) / 1000));
+  opt.set('timer', {last: t, left: Math.floor(d.getTime() / 1000) - t - 1});
   finalCountdown.innerHTML = '~'; // FIXME need to set something special
 }
 
 function tickTimer() {
-  if (opt.timer.v > 0) {
-    opt.set('timer', opt.timer.v - 1);
-    var days = Math.floor(opt.timer.v / 86400);
-    var hours = Math.floor((opt.timer.v - days * 86400) / 3600);
-    var minutes = Math.floor((opt.timer.v - days * 86400 - hours * 3600) / 60);
-    var seconds = opt.timer.v - days * 86400 - hours * 3600 - minutes * 60;
+  if (opt.timer.v.last > 0 && opt.timer.v.left > 0) {
+    var t = Math.floor(new Date().getTime() / 1000);
+
+    opt.timer.v.left = opt.timer.v.left - t + opt.timer.v.last;
+    opt.timer.v.last = t;
+    opt.save('timer');
+
+    var days = Math.floor(opt.timer.v.left / 86400);
+    var hours = Math.floor((opt.timer.v.left - days * 86400) / 3600);
+    var minutes = Math.floor((opt.timer.v.left - days * 86400 - hours * 3600) / 60);
+    var seconds = opt.timer.v.left - days * 86400 - hours * 3600 - minutes * 60;
     finalCountdown.innerHTML = days + ' / ' + hours + ':' + minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
   }
 }
