@@ -142,10 +142,11 @@ function pageLang() {
 
 function pageRedo() {
   c = document.getElementById('tags');
-  if (getHeight(document.body) + getHeight(c) < window.innerHeight)
-    c.classList.add('gd');
-  else
-    c.classList.remove('gd');
+  if (c !== null)
+    if (getHeight(document.body) + getHeight(c) < window.innerHeight)
+      c.classList.add('gd');
+    else
+      c.classList.remove('gd');
 }
 
 function init() {
