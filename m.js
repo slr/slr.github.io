@@ -71,6 +71,10 @@ options.prototype.set = function (name, v) {
   return v;
 }
 
+options.prototype.save = function (name) {
+  storage.set('options:' + name, this[name].v);
+}
+
 var opt = new options();
 var langList = ['en','es','ru'];
 
