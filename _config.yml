@@ -2,6 +2,10 @@ gems:
   - jekyll-redirect-from
 
 name: дорога хороша
+url: https://scary.tasty.sexy
+author:
+  name: Simon Grim
+  email: scary@tasty.sexy
 
 excerpt_separator: <!--lurk-->
 
