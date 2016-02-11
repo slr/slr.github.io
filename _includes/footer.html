@@ -1,3 +1,12 @@
+</div>
+{% if page.tags.size > 0 %}
+<div id="tags">tags:
+{% for tag in page.tags %}
+<i>{{ tag }}</i>{% if tag != page.tags.last %}, {% endif %}
+{% endfor %}
+</div>
+{% endif %}
+<div id="langSelect" lang='en'></div>
 <div id="bye"><div id="bbye">
   <div lang="en">
     <p class="bbgl">good luck!</p>
@@ -12,15 +21,6 @@
     <p class="bbcu">до скорого…</p>
   </div>
 </div></div>
-</div>
-{% if page.tags.size > 0 %}
-<div id="tags">tags:
-{% for tag in page.tags %}
-<i>{{ tag }}</i>{% if tag != page.tags.last %}, {% endif %}
-{% endfor %}
-</div>
-{% endif %}
-<div id="langSelect" lang='en'></div>
 <div style="display: none;">
 <div id="temp-no-lang">
   <div lang="en">
