@@ -1,10 +1,41 @@
 </div>
 {% if page.tags.size > 0 %}
-<div id="tags">tags: 
+<div id="tags">tags:
 {% for tag in page.tags %}
 <i>{{ tag }}</i>{% if tag != page.tags.last %}, {% endif %}
 {% endfor %}
 </div>
 {% endif %}
+<div id="langSelect" lang='en'></div>
+<div style="display: none;">
+<div id="temp-no-lang">
+  <div class="en">
+    <p>sorry, currently no translation is available.</p>
+    <p>feel free to make translation by yourself and even send it via <a href="https://github.com/slr/slr.github.io/pulls">pull requests</a>.</p>
+  </div>
+  <div class="es">
+    <p>lo siento, actualmente traducción no está disponible.</p>
+    <p>no dude en hacer la traducción por ti mismo e incluso enviarlo por <a href="https://github.com/slr/slr.github.io/pulls">pull requests</a>.</p>
+  </div>
+  <div class="ru">
+    <p>сожалею, перевода пока нет.</p>
+    <p>не стесняйся сделать перевод самостоятельно и даже прислать его через <a href="https://github.com/slr/slr.github.io/pulls">pull requests</a>.</p>
+  </div>
+</div>
+</div>
+<div id="bye"><div id="bbye">
+  <div class="en">
+    <p class="bbgl">good luck!</p>
+    <p class="bbcu">see you soon…</p>
+  </div>
+  <div class="es">
+    <p class="bbgl">buena suerte!</p>
+    <p class="bbcu">hasta pronto…</p>
+  </div>
+  <div class="ru">
+    <p class="bbgl">удачи!</p>
+    <p class="bbcu">до скорого…</p>
+  </div>
+</div></div>
 </body>
 </html>
