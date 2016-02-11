@@ -110,30 +110,29 @@ function pageLang() {
         l = opt.lang.v;
   }
 
-  c = document.getElementsByClassName(l);
+  c = document.querySelectorAll('[lang="' + l + '"]');
   if (c.length) {
     for (j = 0; j < c.length; j++)
       c[j].style.display = 'block';
-    for (i = 0; i < langList.length; i++) {
+    for (i = 0; i < langList.length; i++)
       if (langList[i] !== l) {
-        c = document.getElementsByClassName(langList[i]);
+        c = document.querySelectorAll('[lang="' + langList[i] + '"]');
         for (j = 0; j < c.length; j++)
           c[j].style.display = 'none';
       }
-    }
   } else {
     l = '';
     for (i = 0; i < langList.length; i++) {
-      c = document.getElementsByClassName(langList[i]);
+      c = document.querySelectorAll('[lang="' + langList[i] + '"]');
       if (!l && c.length)
         l = langList[i];
-      if (langList[i] === l) {
+
+      if (langList[i] === l)
         for (j = 0; j < c.length; j++)
           c[j].style.display = 'block';
-      } else {
+      else
         for (j = 0; j < c.length; j++)
           c[j].style.display = 'none';
-      }
     }
   }
 
@@ -162,24 +161,19 @@ function init() {
   opt.add('lang', 'auto');
 
   var langSelect = document.getElementById('langSelect');
-  for (i = 0; i < langList.length; i++) {
-    c = document.getElementsByClassName(langList[i]);
-    if (c.length) {
-      for (j = 0; j < c.length; j++)
-        c[j].lang = langList[i];
+  for (i = 0; i < langList.length; i++)
+    if (document.querySelector('[lang="' + langList[i] + '"]') !== null) {
       c = document.createElement('A');
       c.textContent = langList[i];
       c.setAttribute('onclick', 'pageLang(\'' + langList[i] + '\');');
       c.style.margin = '4px';
       langSelect.appendChild(c);
     }
-  }
 
   c = document.getElementById('mc');
-  for (i = 0; i < langList.length; i++) {
-    if (c.getElementsByClassName(langList[i]).length === 0)
-      c.appendChild(document.getElementById('temp-no-lang').getElementsByClassName(langList[i])[0]);
-  }
+  for (i = 0; i < langList.length; i++)
+    if (c.querySelector('[lang="' + langList[i] + '"]') === null)
+      c.appendChild(document.getElementById('temp-no-lang').querySelector('[lang="' + langList[i] + '"]');
 
   document.body.setAttribute('onpageshow', 'pageBye(false);');
 

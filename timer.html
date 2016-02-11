@@ -13,49 +13,49 @@ tags: [память, смерть]
 <div class="cntrd">
 
 <div id="how-old-now">
-<p class="en">how old are you?</p>
-<p class="es">¿сuántos años tienes?</p>
-<p class="ru">сколько тебе лет?</p>
+<p lang="en">how old are you?</p>
+<p lang="es">¿сuántos años tienes?</p>
+<p lang="ru">сколько тебе лет?</p>
 <input id="how-old-now-val" type="number" min="1"><button onclick="yearsNow = parseInt(this.previousSibling.value); if (yearsNow > 0) {shoh(['#how-old-now', '#how-old-end']);}">~</button>
 </div>
 
 <div id="how-old-end">
-<p class="en">how old do you want to be at the end?</p>
-<p class="es">¿сuántos años tú quieres tener al final?</p>
-<p class="ru">сколько тебе лет будет в конце концов?</p>
+<p lang="en">how old do you want to be at the end?</p>
+<p lang="es">¿сuántos años tú quieres tener al final?</p>
+<p lang="ru">сколько тебе лет будет в конце концов?</p>
 <input id="how-old-end-val" type="number" min="1"><button onclick="yearsEnd = parseInt(this.previousSibling.value); if (yearsEnd > yearsNow) {if (yearsEnd > 100) shoh(['#how-old-end', '#get-out']); else {shoh(['#how-old-end', '#timer']); setTimer();}}">~</button>
 </div>
 
 <div id="get-out">
-<p class="en">you are very optimistic person. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">get outta here</a> now.</p>
-<p class="es">eres una persona muy optimista. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">salir de aquí</a> ahora.</p>
-<p class="ru">ты большой оптимист. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">убирайся отсюда</a> сейчас же.</p>
+<p lang="en">you are very optimistic person. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">get outta here</a> now.</p>
+<p lang="es">eres una persona muy optimista. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">salir de aquí</a> ahora.</p>
+<p lang="ru">ты большой оптимист. <a href="https://youtube.com/watch?v=wQ78t7Gamf4">убирайся отсюда</a> сейчас же.</p>
 </div>
 
 <div id="timer">
 <p id="final-countdown" style="font-size: 2.3em;"></p>
-<p class="en"><a onclick="shoh(['#timer', '#timer-options']);">options</a></p>
-<p class="es"><a onclick="shoh(['#timer', '#timer-options']);">opciones</a></p>
-<p class="ru"><a onclick="shoh(['#timer', '#timer-options']);">варианты</a></p>
+<p lang="en"><a onclick="shoh(['#timer', '#timer-options']);">options</a></p>
+<p lang="es"><a onclick="shoh(['#timer', '#timer-options']);">opciones</a></p>
+<p lang="ru"><a onclick="shoh(['#timer', '#timer-options']);">варианты</a></p>
 </div>
 
 <div id="timer-options">
-<div class="en">
+<div lang="en">
 <p>you have not much of options in fact.</p>
 <p>don't smoke. move your body. sleep well.</p>
-<p><a onclick="shoh(['#timer', '#timer-options']);">ok</a> | 
+<p><a onclick="shoh(['#timer', '#timer-options']);">ok</a> |
 <a onclick="shoh(['#timer-options', '#how-old-now']);">reset</a></p>
 </div>
-<div class="es">
+<div lang="es">
 <p>no tienes mucho de opciones, de hecho.</p>
 <p>no fume. mueve tu cuerpo. duerma bien.</p>
-<p><a onclick="shoh(['#timer', '#timer-options']);">sí</a> | 
+<p><a onclick="shoh(['#timer', '#timer-options']);">sí</a> |
 <a onclick="shoh(['#timer-options', '#how-old-now']);">restablecer</a></p>
 </div>
-<div class="ru">
+<div lang="ru">
 <p>на самом деле у тебя не много вариантов.</p>
 <p>не кури. двигайся. высыпайся.</p>
-<p><a onclick="shoh(['#timer', '#timer-options']);">да</a> | 
+<p><a onclick="shoh(['#timer', '#timer-options']);">да</a> |
 <a onclick="shoh(['#timer-options', '#how-old-now']);">уточнить</a></p>
 </div>
 </div>
