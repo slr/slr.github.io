@@ -110,30 +110,32 @@ function pageLang() {
         l = opt.lang.v;
   }
 
-  var mc = document.querySelector('#mc');
-  c = mc.querySelectorAll('[lang="' + l + '"]');
-  if (c.length) {
-    for (j = 0; j < c.length; j++)
-      c[j].style.display = 'block';
-    for (i = 0; i < langList.length; i++)
-      if (langList[i] !== l) {
-        c = mc.querySelectorAll('[lang="' + langList[i] + '"]');
-        for (j = 0; j < c.length; j++)
-          c[j].style.display = 'none';
-      }
-  } else {
-    l = '';
-    for (i = 0; i < langList.length; i++) {
-      c = mc.querySelectorAll('[lang="' + langList[i] + '"]');
-      if (!l && c.length)
-        l = langList[i];
+  var mc = [document.getElementById('#mc'), document.getElementById('#bye')];
+  for (var k = 0; k < mc.length; k++) {
+    c = mc[k].querySelectorAll('[lang="' + l + '"]');
+    if (c.length) {
+      for (j = 0; j < c.length; j++)
+        c[j].style.display = 'block';
+      for (i = 0; i < langList.length; i++)
+        if (langList[i] !== l) {
+          c = mc[k].querySelectorAll('[lang="' + langList[i] + '"]');
+          for (j = 0; j < c.length; j++)
+            c[j].style.display = 'none';
+        }
+    } else {
+      l = '';
+      for (i = 0; i < langList.length; i++) {
+        c = mc[k].querySelectorAll('[lang="' + langList[i] + '"]');
+        if (!l && c.length)
+          l = langList[i];
 
-      if (langList[i] === l)
-        for (j = 0; j < c.length; j++)
-          c[j].style.display = 'block';
-      else
-        for (j = 0; j < c.length; j++)
-          c[j].style.display = 'none';
+        if (langList[i] === l)
+          for (j = 0; j < c.length; j++)
+            c[j].style.display = 'block';
+        else
+          for (j = 0; j < c.length; j++)
+            c[j].style.display = 'none';
+      }
     }
   }
 
