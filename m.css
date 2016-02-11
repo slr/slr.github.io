@@ -41,7 +41,7 @@ img {
 }
 
 .cntrd {
-	text-align: center;
+  text-align: center;
 }
 
 .cs {
@@ -82,11 +82,12 @@ img {
 }
 
 .vid {
-	text-align: center;
+  text-align: center;
 }
 
 #langSelect {
   position: absolute;
+  top: 2%;
   right: 2%;
 }
 

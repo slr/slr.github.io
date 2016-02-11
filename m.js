@@ -110,20 +110,21 @@ function pageLang() {
         l = opt.lang.v;
   }
 
-  c = document.querySelectorAll('[lang="' + l + '"]');
+  var mc = document.querySelector('#mc');
+  c = mc.querySelectorAll('[lang="' + l + '"]');
   if (c.length) {
     for (j = 0; j < c.length; j++)
       c[j].style.display = 'block';
     for (i = 0; i < langList.length; i++)
       if (langList[i] !== l) {
-        c = document.querySelectorAll('[lang="' + langList[i] + '"]');
+        c = mc.querySelectorAll('[lang="' + langList[i] + '"]');
         for (j = 0; j < c.length; j++)
           c[j].style.display = 'none';
       }
   } else {
     l = '';
     for (i = 0; i < langList.length; i++) {
-      c = document.querySelectorAll('[lang="' + langList[i] + '"]');
+      c = mc.querySelectorAll('[lang="' + langList[i] + '"]');
       if (!l && c.length)
         l = langList[i];
 
