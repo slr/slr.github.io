@@ -110,7 +110,7 @@ function pageLang() {
         l = opt.lang.v;
   }
 
-  var mc = [document.getElementById('#mc'), document.getElementById('#bye')];
+  var mc = [document.getElementById('mc'), document.getElementById('bye')];
   for (var k = 0; k < mc.length; k++) {
     c = mc[k].querySelectorAll('[lang="' + l + '"]');
     if (c.length) {
