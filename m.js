@@ -174,9 +174,11 @@ function init() {
     }
 
   c = document.getElementById('mc');
+  var au = mc.getElementsByClassName('au');
+  au = au.length ? au[au.length - 1] : null;
   for (i = 0; i < langList.length; i++)
     if (c.querySelector('[lang="' + langList[i] + '"]') === null)
-      c.appendChild(document.getElementById('temp-no-lang').querySelector('[lang="' + langList[i] + '"]'));
+      c.insertBefore(document.getElementById('temp-no-lang').querySelector('[lang="' + langList[i] + '"]'), au);
 
   document.body.setAttribute('onpageshow', 'pageBye(false);');
 
