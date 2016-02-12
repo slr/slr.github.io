@@ -2,4 +2,11 @@
 <h1>{{ page.title }}</h1>
 <div class="dt">{{ page.date | date: "%Y.%m.%d" }}</div>
 {{ content }}
+<div class="au"><em>
+  {% if page.author.name %}
+    {{ page.author.name }}
+  {% else %}
+    {{ site.author.name }}
+  {% endif %}
+</em></div>
 {% include footer.html %}

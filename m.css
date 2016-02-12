@@ -36,6 +36,11 @@ img {
   margin: 1%;
 }
 
+.au {
+  text-align: right;
+  margin-right: -1%;
+}
+
 .blk {
   display: block;
 }
