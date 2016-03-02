@@ -9,7 +9,7 @@ author:
 
 excerpt_separator: <!--lurk-->
 
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 
 defaults:
   -
