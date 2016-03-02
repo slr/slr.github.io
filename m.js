@@ -9,15 +9,15 @@ function getHeight(el) {
 }
 
 function shoh(el, d) {
-  if (typeof el === 'object' && el.length) {
+  if (!el) return;
+
+  if (typeof el === 'string')
+    for (var el = document.querySelectorAll(el), i = 0; i < el.length; i++)
+      el[i].style.display = (el[i].style.display === 'none') ? d ? d : 'block' : 'none';
+  else if (!el.style)
     for (var i = 0; i < el.length; i++)
       shoh(el[i], d);
-    return;
-  }
-
-  el = (typeof el === 'string') ? document.querySelector(el) : el;
-
-  if (el !== null)
+  else
     el.style.display = (el.style.display === 'none') ? d ? d : 'block' : 'none';
 }
 
