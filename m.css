@@ -54,6 +54,7 @@ img {
 }
 
 .dt {
+  display: block;
   color: #FC6500;
   font-size: small;
   text-align: right;
