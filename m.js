@@ -176,7 +176,7 @@ function init() {
   var c = document.getElementById('mc'), ft = c.querySelector('article footer');
   if (ft)
     c = ft.parentNode;
-  else if (c.getElementsByTagName('article'))
+  else if (c.getElementsByTagName('article').length)
     c = c.getElementsByTagName('article');
 
   for (i = 0; i < langList.length; i++)
