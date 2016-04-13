@@ -173,16 +173,19 @@ function init() {
       langSelect.appendChild(c);
     }
 
-  c = document.getElementById('mc');
-  var au = c.getElementsByClassName('au');
-  au = au.length ? au[au.length - 1] : null;
+  var c = document.getElementById('mc'), ft = c.querySelector('article footer');
+  if (ft)
+    c = ft.parentNode;
+  else if (c.getElementsByTagName('article'))
+    c = c.getElementsByTagName('article');
+
   for (i = 0; i < langList.length; i++)
     if (c.querySelector('[lang="' + langList[i] + '"]') === null)
-      c.insertBefore(document.getElementById('temp-no-lang').querySelector('[lang="' + langList[i] + '"]'), au);
+      c.insertBefore(document.getElementById('temp-no-lang').querySelector('[lang="' + langList[i] + '"]'), ft);
 
   document.body.setAttribute('onpageshow', 'pageBye(false);');
 
   document.body.style.display = 'block';
 
   pageLang();
-};
+}
