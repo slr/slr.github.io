@@ -174,7 +174,7 @@ function init() {
     }
 
   c = document.getElementById('mc');
-  var au = mc.getElementsByClassName('au');
+  var au = c.getElementsByClassName('au');
   au = au.length ? au[au.length - 1] : null;
   for (i = 0; i < langList.length; i++)
     if (c.querySelector('[lang="' + langList[i] + '"]') === null)
