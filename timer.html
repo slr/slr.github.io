@@ -101,7 +101,7 @@ function tickTimer() {
     var hours = Math.floor((opt.timer.v.left - days * 86400) / 3600);
     var minutes = Math.floor((opt.timer.v.left - days * 86400 - hours * 3600) / 60);
     var seconds = opt.timer.v.left - days * 86400 - hours * 3600 - minutes * 60;
-    finalCountdown.innerHTML = days + ' / ' + hours + ':' + minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
+    finalCountdown.innerHTML = days + ' / ' + hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
   }
 }
 </script>
