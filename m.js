@@ -188,4 +188,9 @@ function init() {
   document.body.style.display = 'block';
 
   pageLang();
+
+  c = document.getElementsByTagName('IMG');
+  for (i = 0; i < c.length; i++)
+    if (c[i].src.length === 0 && (j = c[i].getAttribute('data-src')) !== null)
+      c[i].src = j;
 }
