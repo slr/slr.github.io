@@ -194,6 +194,7 @@ function init() {
     if ((j = c[i].getAttribute('data-src')) !== null) {
       c[i].outerHTML = '<img src="' + j + '"'
         + ' alt="' + ((j = c[i].getAttribute('data-alt')) !== null ? j : '') + '"'
+        + (j !== null ? ' title="' + j + '"' : '')
         + ' class="' + c[i].className.replace('img-ph', '').trim() + '"'
         + ' style="' + ((j = c[i].style.width) !== '' ? 'width:' + j + ';' : '')
         + ((j = c[i].style.height) !== '' ? 'height:' + j + ';' : '') + '" />';
