@@ -65,6 +65,11 @@ img {
   display: none;
 }
 
+.img-ph {
+  border: 1px solid;
+  margin: 1%;
+}
+
 .pl {
   list-style-type: none;
 }

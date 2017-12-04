@@ -189,8 +189,12 @@ function init() {
 
   pageLang();
 
-  c = document.getElementsByTagName('IMG');
+  c = document.getElementsByClassName('img-ph');
   for (i = 0; i < c.length; i++)
-    if (c[i].src.length === 0 && (j = c[i].getAttribute('data-src')) !== null)
-      c[i].src = j;
+    if ((j = c[i].getAttribute('data-src')) !== null)
+      c[i].outerHTML = '<img src="' + j + '"'
+        + ' alt="' + ((j = c[i].getAttribute('data-alt')) !== null ? j : '') + '"'
+        + ' class="' + c[i].className.replace('img-ph', '').trim() + '"'
+        + ' style="' + ((j = c[i].style.width) !== '' ? 'width:' + j + ';' : '')
+        + ((j = c[i].style.height) !== '' ? 'height:' + j + ';' : '') + '" />';
 }
