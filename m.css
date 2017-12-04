@@ -66,6 +66,7 @@ img {
 }
 
 .img-ph {
+  display: inline-block;
   border: 1px solid;
   margin: 1%;
 }
