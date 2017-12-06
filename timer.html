@@ -9,7 +9,7 @@ tags: [память, смерть]
 
 <div class="dt"></div>
 
-<div id="tcont" style="display: flex; align-items: center; justify-content: center;">
+<div id="tcont" style="display: flex; flex-grow: 1; align-items: center; justify-content: center;">
 <div class="cntrd">
 
 <div id="how-old-now">
@@ -41,13 +41,13 @@ tags: [память, смерть]
 
 <div id="timer-options">
 <div lang="en">
-<p>you have not much of options in fact.</p>
+<p>you have not many options in fact.</p>
 <p>don't smoke. move your body. sleep well.</p>
 <p><a onclick="shoh(['#timer', '#timer-options']);">ok</a> |
 <a onclick="shoh(['#timer-options', '#how-old-now']);">reset</a></p>
 </div>
 <div lang="es">
-<p>no tienes mucho de opciones, de hecho.</p>
+<p>tienes no muchas opciones, de hecho.</p>
 <p>no fume. mueve tu cuerpo. duerma bien.</p>
 <p><a onclick="shoh(['#timer', '#timer-options']);">sí</a> |
 <a onclick="shoh(['#timer-options', '#how-old-now']);">restablecer</a></p>
@@ -66,9 +66,6 @@ tags: [память, смерть]
 <script>
 var dt = new Date(), finalCountdown = document.getElementById('final-countdown'), yearsNow, yearsEnd;
 document.querySelector('.dt').innerHTML = dt.toISOString().slice(0, 10).replace(/-/g, '.');
-
-eval(pageRedo.toString().replace(/\(\)\s*\{/, '(){\n'
-  + 'document.getElementById(\'tcont\').style.height = (window.innerHeight - getHeight(\'h1\') - getHeight(\'.dt\') - getHeight(\'#tags\') - getHeight(\'#mc\') + document.getElementById(\'mc\').offsetHeight).toString() + \'px\';'));
 
 opt.add('timer', 0);
 
