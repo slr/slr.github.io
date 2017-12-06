@@ -134,17 +134,21 @@ img {
 }
 
 #mc {
-  margin: 2% 17%;
+  display: flex;
+  min-height: 96vh;
+  margin: 2vh 17vw;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+main {
+  display: flex;
+  margin-bottom: 2vh;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 #tags {
-  position: relative;
-  width: 54%;
-  margin: 1% 23%;
   text-align: center;
-}
-
-#tags.gd {
-  position: absolute;
-  bottom: 0;
 }

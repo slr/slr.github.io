@@ -1,13 +1,3 @@
-function getHeight(el) {
-  el = (typeof el === 'string') ? document.querySelector(el) : el;
-
-  if (el === null) return;
-
-  var style = window.getComputedStyle(el);
-
-  return el.offsetHeight + parseFloat(style.marginTop) + parseFloat(style.marginBottom);
-}
-
 function shoh(el, d) {
   if (!el) return;
 
@@ -138,17 +128,6 @@ function pageLang() {
       }
     }
   }
-
-  pageRedo();
-}
-
-function pageRedo() {
-  c = document.getElementById('tags');
-  if (c !== null)
-    if (getHeight(document.body) + getHeight(c) < window.innerHeight)
-      c.classList.add('gd');
-    else
-      c.classList.remove('gd');
 }
 
 function init() {
