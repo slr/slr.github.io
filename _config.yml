@@ -11,6 +11,11 @@ excerpt_separator: <!--lurk-->
 
 permalink: /:year/:month/:title/
 
+collections:
+  rtags:
+    output: true
+    permalink: /tag/:name/
+
 defaults:
   -
     scope:
@@ -18,9 +23,9 @@ defaults:
       type: "posts"
     values:
       layout: "posts"
-
-collections:
-  _tags:
-    output: true
-    layout: "tags"
-    permalink: /tag/:name/
+  -
+    scope:
+      path: ""
+      type: "rtags"
+    values:
+      layout: "tags"
