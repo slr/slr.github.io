@@ -18,3 +18,9 @@ defaults:
       type: "posts"
     values:
       layout: "posts"
+
+collections:
+  _tags:
+    output: true
+    layout: "tags"
+    permalink: /tag/:name/
