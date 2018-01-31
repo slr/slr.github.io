@@ -1,19 +1,18 @@
 {% if page.tags.size > 0 %}
 <div id="tags">tags:
 {% for tag in page.tags %}
-<i>
 {% assign exists = false %}
 {% for rtag in site.rtags %}
 {% if rtag.tag == tag %}
-<a href="{{ rtag.url }}">{{ rtag.name }}</a>
+<i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
 {% assign exists = true %}
 {% break %}
 {% endif %}
 {% endfor %}
 {% unless exists %}
-{{ tag }}
+<i>{{ tag }}</i>
 {% endunless %}
-</i>{% if tag != page.tags.last %}, {% endif %}
+{% if tag != page.tags.last %}, {% endif %}
 {% endfor %}
 </div>
 {% endif %}
