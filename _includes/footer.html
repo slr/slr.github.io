@@ -5,7 +5,7 @@
 {% assign exists = false %}
 {% for rtag in site.rtags %}
 {% if rtag.tag == tag %}
-<a href="{% post_url rtag.id %}">{{ rtag.name }}</a>
+<a href="{% link rtag.url %}">{{ rtag.name }}</a>
 {% assign exists = true %}
 {% break %}
 {% endif %}
