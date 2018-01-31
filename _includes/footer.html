@@ -5,7 +5,7 @@
 {% assign exists = false %}
 {% for rtag in site.rtags %}
 {% if rtag.tag == tag %}
-<a href="{{ rtag.permalink }}">{{ rtag.name }}</a>
+<a href="{% post_url rtag.id %}">{{ rtag.name }}</a>
 {% assign exists = true %}
 {% break %}
 {% endif %}
@@ -13,8 +13,7 @@
 {% unless exists %}
 {{ tag }}
 {% endunless %}
-</i>
-{% if tag != page.tags.last %}, {% endif %}
+</i>{% if tag != page.tags.last %}, {% endif %}
 {% endfor %}
 </div>
 {% endif %}
