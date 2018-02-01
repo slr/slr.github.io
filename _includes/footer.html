@@ -3,7 +3,7 @@
 {% for tag in page.tags %}
 {% assign exists = false %}
 {% for rtag in site.rtags %}
-{% if rtag.tag == tag %}
+{% if rtag.slug == tag %}
 <i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
 {% assign exists = true %}
 {% break %}
