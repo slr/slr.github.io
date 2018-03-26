@@ -179,4 +179,15 @@ function init() {
         + ((j = c[i].style.height) !== '' ? 'height:' + j + ';' : '') + '" />';
       i--;
     }
+
+  c = document.getElementsByClassName('vid-ph');
+  for (i = 0; i < c.length; i++)
+    if ((j = c[i].getAttribute('data-src')) !== null) {
+      c[i].outerHTML = '<div class="vid ' + c[i].className.replace('vid-ph', '').trim() + '">'
+        + '<iframe src="' + j + '"'
+        + ((j = c[i].style.width) !== '' ? ' width="' + j + '"' : '')
+        + ((j = c[i].style.height) !== '' ? ' height="' + j + '"' : '')
+        + ' frameborder="0" allowfullscreen></iframe></div>';
+      i--;
+    }
 }

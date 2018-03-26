@@ -65,7 +65,7 @@ img {
   display: none;
 }
 
-.img-ph {
+.img-ph, .vid-ph {
   display: inline-block;
   border: 1px solid;
   margin: 1%;
