@@ -153,3 +153,13 @@ main {
 #tags {
   text-align: center;
 }
+
+@media only screen and (orientation: portrait) {
+  h1 {
+    margin-left: -1.5%;
+  }
+
+  #mc {
+    margin: 2vh 5vw;
+  }
+}
