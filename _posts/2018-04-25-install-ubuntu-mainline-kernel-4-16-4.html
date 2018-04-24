@@ -1,0 +1,58 @@
+---
+redirect_from: /2018/04/install-ubuntu-mainline-kernel-4-16-4.html
+title: how to install mainline kernel 4.16.4 or 4.17-rc2 on Ubuntu 16.04
+tags: [tipz, ubuntu]
+---
+<div lang="en">
+<p>
+you cannot install fresh kernel on your long-standing Ubuntu system?
+</p>
+</div>
+<div lang="ru">
+<p>
+не можешь поставить свежее ядро в свою допотопную Убунточку?
+</p>
+</div>
+<!--lurk-->
+
+<div lang="en">
+<div class="qt">
+<p>Setting up linux-image-unsigned-4.16.4-041604-generic (4.16.4-041604.201804240433) …</p>
+<p>/var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.postinst: 50: /var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.postinst: linux-update-symlinks: not found</p>
+<p>dpkg: error processing package linux-image-unsigned-4.16.4-041604-generic (--install):</p>
+<p>subprocess installed post-installation script returned error exit status 127</p>
+</div>
+<p>
+but you also cannot remove it from now on?
+</p>
+<div class="qt">
+<p>Removing linux-image-unsigned-4.16.4-041604-generic (4.16.4-041604.201804240433) …</p>
+<p>/var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.prerm: 11: /var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.prerm: linux-check-removal: not found</p>
+<p>dpkg: error processing package linux-image-unsigned-4.16.4-041604-generic (--remove):</p>
+<p>subprocess installed pre-removal script returned error exit status 127</p>
+</div>
+<p>
+pay attention to "not found": version 4.0ubuntu1 of package <em>linux-base</em> does not contain <strong>linux-update-symlinks</strong> and <strong>linux-check-removal</strong> scripts at least. so download and install version 4.5ubuntu1 — <a href="http://archive.ubuntu.com/ubuntu/pool/main/l/linux-base/linux-base_4.5ubuntu1_all.deb">http://archive.ubuntu.com/ubuntu/pool/main/l/linux-base/linux-base_4.5ubuntu1_all.deb</a>
+</p>
+</div>
+
+<div lang="ru">
+<div class="qt">
+<p>Настраивается пакет linux-image-unsigned-4.16.4-041604-generic (4.16.4-041604.201804240433) …</p>
+<p>/var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.postinst: 50: /var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.postinst: linux-update-symlinks: not found</p>
+<p>dpkg: ошибка при обработке пакета linux-image-unsigned-4.16.4-041604-generic (--install):</p>
+<p>подпроцесс установлен сценарий post-installation возвратил код ошибки 127</p>
+</div>
+<p>
+но и удалить его тоже уже не получается?
+</p>
+<div class="qt">
+<p>Удаляется linux-image-unsigned-4.16.4-041604-generic (4.16.4-041604.201804240433) …</p>
+<p>/var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.prerm: 11: /var/lib/dpkg/info/linux-image-unsigned-4.16.4-041604-generic.prerm: linux-check-removal: not found</p>
+<p>dpkg: ошибка при обработке пакета linux-image-unsigned-4.16.4-041604-generic (--remove):</p>
+<p> подпроцесс установлен сценарий pre-removal возвратил код ошибки 127</p>
+</div>
+<p>
+обрати внимание на «not found»: в установленной у тебя версии 4.0ubuntu1 пакета <em>linux-base</em> не хватает скриптов <strong>linux-update-symlinks</strong> и <strong>linux-check-removal</strong> как минимум. поэтому скачай и накати версию 4.5ubuntu1 — <a href="http://archive.ubuntu.com/ubuntu/pool/main/l/linux-base/linux-base_4.5ubuntu1_all.deb">http://archive.ubuntu.com/ubuntu/pool/main/l/linux-base/linux-base_4.5ubuntu1_all.deb</a>
+</p>
+</div>
