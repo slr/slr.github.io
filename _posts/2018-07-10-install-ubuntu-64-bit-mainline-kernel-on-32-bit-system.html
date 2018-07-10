@@ -1,0 +1,100 @@
+---
+redirect_from: /2018/07/install-ubuntu-mainline-kernel-4-17-3.html
+title: how to install 64-bit mainline kernels since 4.17.3 or 4.18-rc2 on 32-bit Ubuntu 16.04 or 18.04
+tags: [tipz, ubuntu]
+---
+<div lang="en">
+<p>
+it seems there will be no 32-bit Linux kernel builds from Canonical anymore.
+but in case if your CPU is able to handle 64-bit instructions
+you may try to install a 64-bit kernel on your 32-bit Ubuntu with multiarch.
+</p>
+</div>
+<div lang="ru">
+<p>
+похоже, что больше не будет 32-битных сборок ядер Linux от Canonical.
+но в случае, если твой CPU способен обрабатывать 64-битные инструкции
+ты можешь установить 64-битное ядро на свою 32-битную Ubuntu с multiarch.
+</p>
+</div>
+<!--lurk-->
+
+<div lang="en">
+<p>
+first check "lscpu | grep op-mode" if you're not sure about your CPU specs.
+</p>
+<div class="qt">
+<p>CPU op-mode(s):      32-bit, 64-bit</p>
+</div>
+<p>
+if you do see 64-bit in the output you're OK.
+now you need to add support of 64-bit architecture if you don't have it yet:
+</p>
+<div class="qt">
+<p>$ sudo dpkg --add-architecture amd64</p>
+<p>$ sudo apt update</p>
+</div>
+<p>
+if you have Ubuntu 16.04 then download and install libssl1.1 both 32-bit and 64-bit
+to make sure you have the same version onboard.
+</p>
+<div class="qt">
+<p>$ wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4.1_i386.deb http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb</p>
+<p>$ sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4.1_i386.deb libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb</p>
+</div>
+<p>
+also you need some prerequisites. for Ubuntu 16.04:
+</p>
+<div class="qt">
+<p>$ sudo apt install libc6:amd64 libelf1:amd64 libgcc1:amd64 zlib1g:amd64 gcc-6-base:amd64</p>
+</div>
+<p>
+for Ubuntu 18.04:
+</p>
+<div class="qt">
+<p>$ sudo apt install libc6:amd64 libelf1:amd64 libgcc1:amd64 zlib1g:amd64 gcc-8-base:amd64 libssl1.1:amd64</p>
+</div>
+<p>
+now you're ready to install any of most modern kernels.
+</p>
+</div>
+
+<div lang="ru">
+<p>
+сперва проверь "lscpu | grep op-mode", если ты не уверен в характеристиках твоего CPU.
+</p>
+<div class="qt">
+<p>CPU op-mode(s):      32-bit, 64-bit</p>
+</div>
+<p>
+если ты видишь 64-bit в выводе — ты в порядке.
+теперь тебе нужно установить поддержку 64-битной архитектуры, если ты не имеешь её ещё:
+</p>
+<div class="qt">
+<p>$ sudo dpkg --add-architecture amd64</p>
+<p>$ sudo apt update</p>
+</div>
+<p>
+если у тебя Ubuntu 16.04, то скачай и установи libssl1.1 и 32-х, и 64-битную,
+чтобы убедиться, что у тебя одинаковая версия на борту.
+</p>
+<div class="qt">
+<p>$ wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4.1_i386.deb http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb</p>
+<p>$ sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4.1_i386.deb libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb</p>
+</div>
+<p>
+также тебе необходимы некоторые предварительные приготовления. для Ubuntu 16.04:
+</p>
+<div class="qt">
+<p>$ sudo apt install libc6:amd64 libelf1:amd64 libgcc1:amd64 zlib1g:amd64 gcc-6-base:amd64</p>
+</div>
+<p>
+для Ubuntu 18.04:
+</p>
+<div class="qt">
+<p>$ sudo apt install libc6:amd64 libelf1:amd64 libgcc1:amd64 zlib1g:amd64 gcc-8-base:amd64 libssl1.1:amd64</p>
+</div>
+<p>
+теперь ты готов устанавливать любые современные ядра.
+</p>
+</div>
