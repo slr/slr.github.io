@@ -133,6 +133,13 @@ function pageLang() {
 function init() {
   var i, j, c;
 
+  if (typeof window.matchMedia === 'function' && window.matchMedia('screen').matches)
+    for (i = 0; i < 40; i++)
+      if (!window.matchMedia('(min-resolution: ' + (96 + i * 24) + 'dpi)').matches) {
+        document.body.style['font-size'] = (1 + (i - 1) * 0.15) + 'em';
+        break;
+      }
+
   c = document.getElementsByTagName('A');
   for (i = 0; i < c.length; i++) {
     if (c[i].href.length > 1 && (c[i].href.indexOf(document.domain) === -1
