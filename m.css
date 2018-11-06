@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 1em;
 }
 
 a {
@@ -19,13 +20,13 @@ a:hover {
 }
 
 h1 {
-  font-size: xx-large;
+  font-size: 200%;
   margin-left: -3%;
 }
 
 h2 {
   color: #404;
-  font-size: large;
+  font-size: 110%;
   margin-top: 4%;
 }
 
@@ -56,7 +57,7 @@ img {
 .dt {
   display: block;
   color: #FC6500;
-  font-size: small;
+  font-size: 82%;
   text-align: right;
   margin-right: -2%;
 }
