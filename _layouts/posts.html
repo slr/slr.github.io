@@ -3,7 +3,7 @@
 <article>
 <header>
 <h1>{{ page.title }}</h1>
-<time class="dt" datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
+<p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
 </header>
 {{ content }}
 <footer>
