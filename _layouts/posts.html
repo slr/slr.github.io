@@ -5,7 +5,7 @@
 <h1>{{ page.title }}</h1>
 <p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
 </header>
-{{- content -}}
+{{ content | strip }}
 <footer>
 <div class="au"><em>{% if page.author.name %}
   {{- page.author.name -}}
