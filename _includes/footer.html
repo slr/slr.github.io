@@ -5,14 +5,14 @@
 {%- for rtag in site.rtags -%}
 {% if rtag.slug == tag -%}
 <i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
-{% assign exists = true %}
+{%- assign exists = true %}
 {%- break -%}
-{%- endif %}
+{% endif %}
 {%- endfor -%}
 {% unless exists -%}
 <i>{{ tag }}</i>
 {%- endunless %}
-{%- if tag != page.tags.last -%}, {% endif -%}
+{%- if tag != page.tags.last %}, {% endif -%}
 {%- endfor %}
 </div>
 {% endif %}
