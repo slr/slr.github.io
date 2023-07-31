@@ -1,6 +1,6 @@
 # HEY THERE!
 
-[my living dead blog](https://scary.tasty.sexy) was moved here from Blogger.
+[my living dead blog](https://sad.st) was moved here from Blogger.
 
 ## ALL SYSTEMS NOMINAL
 
