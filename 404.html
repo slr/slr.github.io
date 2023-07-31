@@ -2,7 +2,7 @@
 permalink: /404.html
 title: "keep on rollin'"
 ---
-{% include header.html %}
+{% include header.html -%}
 <main>
 <h1>{{ page.title }}</h1>
 <div lang="ru">
@@ -14,9 +14,7 @@ title: "keep on rollin'"
 <div lang="es">
 <p>sin música aquí.</p>
 </div>
-
 <span class="vid-ph" data-src="https://www.youtube.com/embed/8b3sdPGL5p0" style="width: 560px; height: 315px;"></span>
-
 <div lang="ru">
 <p class="cntrd"><em>о, пожалуйста</em></p>
 </div>
@@ -27,4 +25,4 @@ title: "keep on rollin'"
 <p class="cntrd"><em>oh, por favor</em></p>
 </div>
 </main>
-{% include footer.html %}
+{%- include footer.html %}
