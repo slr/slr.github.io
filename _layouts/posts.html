@@ -7,13 +7,11 @@
 </header>
 {{ content }}
 <footer>
-<div class="au"><em>
-  {% if page.author.name %}
-    {{- page.author.name -}}
-  {% else %}
-    {{- site.author.name -}}
-  {% endif %}
-</em></div>
+<div class="au"><em>{% if page.author.name %}
+  {{- page.author.name -}}
+{% else %}
+  {{- site.author.name -}}
+{% endif %}</em></div>
 </footer>
 </article>
 </main>
