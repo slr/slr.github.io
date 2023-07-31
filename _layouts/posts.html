@@ -1,11 +1,11 @@
-{% include header.html %}
+{% include header.html -%}
 <main>
 <article>
 <header>
 <h1>{{ page.title }}</h1>
 <p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
 </header>
-{{ content }}
+{{- content -}}
 <footer>
 <div class="au"><em>{% if page.author.name %}
   {{- page.author.name -}}
@@ -15,4 +15,4 @@
 </footer>
 </article>
 </main>
-{% include footer.html %}
+{%- include footer.html %}
