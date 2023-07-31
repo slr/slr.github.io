@@ -3,15 +3,15 @@
 {% for tag in page.tags -%}
 {% assign exists = false %}
 {% for rtag in site.rtags -%}
-{% if rtag.slug == tag %}
+{% if rtag.slug == tag -%}
 <i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
 {% assign exists = true %}
 {% break %}
-{% endif %}
+{%- endif %}
 {%- endfor %}
-{% unless exists %}
+{% unless exists -%}
 <i>{{ tag }}</i>
-{% endunless %}
+{%- endunless %}
 {%- if tag != page.tags.last %}, {% endif %}
 {%- endfor %}
 </div>
