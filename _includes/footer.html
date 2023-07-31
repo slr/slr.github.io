@@ -6,8 +6,8 @@
 {% if rtag.slug == tag -%}
 <i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
 {% assign exists = true %}
-{% break %}
-{%- endif -%}
+{%- break -%}
+{%- endif %}
 {%- endfor -%}
 {% unless exists -%}
 <i>{{ tag }}</i>
