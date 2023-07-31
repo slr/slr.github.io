@@ -1,23 +1,22 @@
 ---
 title: Сёма Мрачный доведёт
 ---
-{% include header.html %}
+{% include header.html -%}
 <main>
 <h1>{{ site.name }}</h1>
 <ul class="pl">
 {% assign point = false %}
-{% for post in site.posts %}
-{% unless point == true %}
+{%- for post in site.posts -%}
+{%- unless point == true -%}
 <li>
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-{{ post.excerpt }}
-<div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
+{{- post.excerpt -}}<div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
 </li>
-{% endunless %}
-{% if post.slug == "point" %}
+{%- endunless -%}
+{%- if post.slug == "point" %}
 {% assign point = true %}
-{% endif %}
-{% endfor %}
+{% endif -%}
+{%- endfor -%}
 </ul>
 </main>
-{% include footer.html %}
+{%- include footer.html %}
