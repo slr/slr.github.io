@@ -8,11 +8,11 @@
 {{ content }}
 <footer>
 <div class="au"><em>
-  {%- if page.author.name %}
-    {{ page.author.name }}
+  {% if page.author.name %}
+    {{- page.author.name -}}
   {% else %}
-    {{ site.author.name }}
-  {% endif -%}
+    {{- site.author.name -}}
+  {% endif %}
 </em></div>
 </footer>
 </article>
