@@ -12,7 +12,7 @@
 {% unless exists -%}
 <i>{{ tag }}</i>
 {%- endunless %}
-{%- if tag != page.tags.last %}, {% endif -%}
+{%- if tag != page.tags.last -%}, {% endif -%}
 {%- endfor %}
 </div>
 {% endif %}
