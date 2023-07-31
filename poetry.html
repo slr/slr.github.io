@@ -3,7 +3,7 @@ permalink: /poetry/
 redirect_from: /poetry.html
 title: Сёма Мрачный настрочит
 ---
-{% include header.html %}
+{% include header.html -%}
 <main>
 <article>
 <header>
@@ -12,18 +12,17 @@ title: Сёма Мрачный настрочит
 <h1 lang="es">lo que se pierde aquí se gana allí</h1>
 </header>
 <ul class="pl">
-{% for post in site.posts %}
-{% if post.categories contains "poetry" %}
+{%- for post in site.posts -%}
+{%- if post.categories contains "poetry" -%}
 <li>
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-{{ post.excerpt }}
-<div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
+{{- post.excerpt -}}<div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
 </li>
-{% endif %}
-{% endfor %}
+{%- endif -%}
+{%- endfor -%}
 </ul>
 <footer>
 </footer>
 </article>
 </main>
-{% include footer.html %}
+{%- include footer.html %}
