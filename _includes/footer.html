@@ -2,13 +2,13 @@
 <div id="tags">tags:
 {% for tag in page.tags -%}
 {% assign exists = false %}
-{% for rtag in site.rtags %}
+{% for rtag in site.rtags -%}
 {% if rtag.slug == tag %}
 <i><a href="{{ rtag.url }}">{{ rtag.name }}</a></i>
 {% assign exists = true %}
 {% break %}
 {% endif %}
-{% endfor %}
+{%- endfor %}
 {% unless exists %}
 <i>{{ tag }}</i>
 {% endunless %}
