@@ -1,4 +1,4 @@
-{% if page.tags.size > 0 %}
+{%- if page.tags.size > 0 %}
 <div id="tags">tags:
 {% for tag in page.tags -%}
 {% assign exists = false %}
@@ -15,7 +15,7 @@
 {%- if tag != page.tags.last %}, {% endif -%}
 {%- endfor %}
 </div>
-{% endif %}
+{% endif -%}
 </div>
 <div id="langSelect" lang='en'></div>
 <div id="bye"><div id="bbye">
