@@ -29,3 +29,6 @@ defaults:
       type: "rtags"
     values:
       layout: "tags"
+
+paginate: 7
+paginate_path: "/posts/:num/"
