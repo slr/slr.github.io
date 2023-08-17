@@ -5,19 +5,22 @@ title: Сёма Мрачный доведёт
 <main>
 <h1>{{ site.name }}</h1>
 <ul class="pl">
-{% assign point = false %}
 {%- for post in site.posts -%}
-{%- unless point == true -%}
-<li>
+{%- if post.hidden != true %}
+<li id="post_{% increment posts_rendered %}">
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 {{ post.excerpt | strip }}
 <div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
 </li>
-{%- endunless -%}
-{%- if post.slug == "point" %}
-{% assign point = true %}
+{% endif -%}
+{%- if posts_rendered == 6 %}
+{%- break -%}
 {% endif -%}
 {%- endfor -%}
 </ul>
 </main>
+<div class="cntrd">
+<span>1 / {{ paginator.total_pages }}</span>
+<a href="{{ site.paginate_path | relative_url | replace: ':num', 2 }}">&gt;&gt;</a>
+</div>
 {%- include footer.html %}
