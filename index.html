@@ -12,15 +12,15 @@ title: Сёма Мрачный доведёт
 {{ post.excerpt | strip }}
 <div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
 </li>
-{% endif -%}
-{%- if posts_rendered == 6 %}
+{%- endif -%}
+{%- if posts_rendered == site.paginate %}
 {%- break -%}
 {% endif -%}
 {%- endfor -%}
 </ul>
 </main>
 <div class="cntrd">
-<span>1 / {{ paginator.total_pages }}</span>
+<span>1 / {{ site.paginator.total_pages }}</span>
 <a href="{{ site.paginate_path | relative_url | replace: ':num', 2 }}">&gt;&gt;</a>
 </div>
 {%- include footer.html %}
