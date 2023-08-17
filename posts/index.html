@@ -15,20 +15,16 @@ title: Сёма Мрачный доведёт
 </ul>
 </main>
 <div class="cntrd">
-{% if paginator.previous_page %}
+{%- if paginator.previous_page -%}
 <a href="{{ paginator.previous_page_path }}">&lt;&lt;</a>
-{% else %}
-<a href="/" lang="en">home</a>
-<a href="/" lang="es">portada</a>
-<a href="/" lang="ru">домой</a>
-{% endif %}
+{%- endif -%}
 <span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
-{% if paginator.next_page %}
+{%- if paginator.next_page -%}
 <a href="{{ paginator.next_page_path }}">&gt;&gt;</a>
-{% else %}
+{%- else -%}
 <a href="/" lang="en">home</a>
 <a href="/" lang="es">portada</a>
 <a href="/" lang="ru">домой</a>
-{% endif %}
+{%- endif -%}
 </div>
 {%- include footer.html %}
