@@ -16,9 +16,13 @@ title: Сёма Мрачный доведёт
 </main>
 <div class="cntrd">
 {%- if paginator.previous_page -%}
-<a href="{{ paginator.previous_page_path }}">&lt;&lt;</a>
+{%- if paginator.page == 2 -%}
+<a href="/">&lt;&lt;</a>&nbsp;
+{%- else -%}
+<a href="{{ paginator.previous_page_path }}">&lt;&lt;</a>&nbsp;
 {%- endif -%}
-<span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
+{%- endif -%}
+<span>{{ paginator.page }} / {{ paginator.total_pages }}</span>&nbsp;
 {%- if paginator.next_page -%}
 <a href="{{ paginator.next_page_path }}">&gt;&gt;</a>
 {%- else -%}
