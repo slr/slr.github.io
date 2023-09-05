@@ -11,6 +11,8 @@ excerpt_separator: <!--lurk-->
 
 permalink: /:year/:month/:title/
 
+future: true
+
 collections:
   rtags:
     output: true
