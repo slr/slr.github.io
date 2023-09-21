@@ -1,0 +1,33 @@
+---
+permalink: /bike/
+redirect_from: /bike.html
+title: Сёма Мрачный на колёсах
+---
+{% include header.html -%}
+<main>
+<article>
+<header>
+<h1 lang="ru">велик</h1>
+<h1 lang="en">bike</h1>
+<h1 lang="es">bici</h1>
+</header>
+<div class="cntrd">
+<a class="blk" href="/img/2023-09-16_01.jpg"><span class="img-ph" data-src="/img/2023-09-16_01.jpg" data-alt="городской велосипед Elops 3 на фоне реки Невы, вид сбоку, 2023.09.16"></span></a>
+<a class="blk" href="/img/2023-09-16_02.jpg"><span class="img-ph" data-src="/img/2023-09-16_02.jpg" data-alt="городской велосипед Elops 3 на фоне реки Невы, вид сзади, 2023.09.16"></span></a>
+</div>
+<ul class="pl">
+{%- for post in site.posts -%}
+{%- if post.categories contains "bike" -%}
+<li>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+{{ post.excerpt | strip }}
+<div class="dt">{{ post.date | date: "%Y.%m.%d" }}</div>
+</li>
+{%- endif -%}
+{%- endfor -%}
+</ul>
+<footer>
+</footer>
+</article>
+</main>
+{%- include footer.html %}
