@@ -155,7 +155,6 @@ function init() {
       c = document.createElement('A');
       c.textContent = langList[i];
       c.setAttribute('onclick', 'pageLang(\'' + langList[i] + '\');');
-      c.style.margin = '4px';
       langSelect.appendChild(c);
     }
 

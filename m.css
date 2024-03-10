@@ -99,10 +99,19 @@ img {
   margin: 1%;
 }
 
-#langSelect {
+#navToolz {
   position: absolute;
   top: 2%;
   right: 2%;
+  text-align: right;
+}
+
+#navToolz a {
+  margin: 0.2vw;
+}
+
+#navToolz div {
+  margin: 0.5vw;
 }
 
 #bye {
