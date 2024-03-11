@@ -105,7 +105,7 @@ function pageLang() {
     c = mc[k].querySelectorAll('[lang="' + l + '"]');
     if (c.length) {
       for (j = 0; j < c.length; j++)
-        c[j].style.display = (c[j].nodeName === 'DIV' ? 'block' : 'initial');
+        c[j].style.display = ((c[j].nodeName === 'A' || c[j].nodeName === 'SPAN') ? 'inline' : 'block');
       for (i = 0; i < langList.length; i++)
         if (langList[i] !== l) {
           c = mc[k].querySelectorAll('[lang="' + langList[i] + '"]');
@@ -121,7 +121,7 @@ function pageLang() {
 
         if (langList[i] === l)
           for (j = 0; j < c.length; j++)
-            c[j].style.display = (c[j].nodeName === 'DIV' ? 'block' : 'initial');
+            c[j].style.display = ((c[j].nodeName === 'A' || c[j].nodeName === 'SPAN') ? 'inline' : 'block');
         else
           for (j = 0; j < c.length; j++)
             c[j].style.display = 'none';
