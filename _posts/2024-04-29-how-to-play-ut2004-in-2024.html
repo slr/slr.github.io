@@ -1,0 +1,65 @@
+---
+redirect_from: /2024/04/how-to-play-ut2004-in-2024.html
+title: как играть в Unreal Tournament 2004 в 2024
+tags: [tipz]
+---
+<div lang="ru">
+<p>чтобы играть в UT2004 сегодня, достаточно двух простых правок конфига.
+</div>
+<div lang="en">
+<p>today to play UT2004 two easy edits of configs are enough.
+</div>
+<!--lurk-->
+
+<div lang="ru">
+<p>во-первых, чтобы иметь возможность подключаться к мастер-серверу OpenSpy,
+следующие строки в файле <em>System/UT2004.ini</em> необходимо заменить
+</div>
+<div lang="en">
+<p>first, to be able to connect to OpenSpy master server
+one needs to replace the following strings in file <em>System/UT2004.ini</em>
+</div>
+<div class="qt">
+<p>MasterServerList=(Address="ut2004master1.epicgames.com",Port=28902)
+<p>MasterServerList=(Address="ut2004master2.epicgames.com",Port=28902)
+</div>
+<div lang="ru">
+<p>на
+</div>
+<div lang="en">
+<p>with
+</div>
+<div class="qt">
+<p>MasterServerList=(Address="utmaster.openspy.net",Port=28902)
+</div>
+<div lang="ru">
+<p>во-вторых, чтобы комфортно играть на широкоформатном мониторе, нужно распаковать в папку с игрой архив с патчем из репозитория
+<a href="https://github.com/alexstrout/foxWSFix-UT2k4/releases/latest">alexstrout/foxWSFix-UT2k4</a>,
+а затем следующие строки (все из них) в файле <em>System\User.ini</em> заменить
+</div>
+<div lang="en">
+<p>second, to play with ease on a widescreen display one needs to extract to game directory an archive with a patch from
+<a href="https://github.com/alexstrout/foxWSFix-UT2k4/releases/latest">alexstrout/foxWSFix-UT2k4</a> repository
+and then replace the following strings (all of them) in file <em>System\User.ini</em>
+</div>
+<div class="qt">
+<p>InputClass=Class'Engine.PlayerInput'
+</div>
+<div lang="ru">
+<p>на
+</div>
+<div lang="en">
+<p>with
+</div>
+<div class="qt">
+<p>InputClass=Class'foxWSFix.foxPlayerInput'
+</div>
+<div lang="ru">
+<p>разрешение можно поменять через встроенную игровую консоль (нажми ` на клавиатуре)
+</div>
+<div lang="en">
+<p>resolution can be adjusted via the game's built-in console command (press ` on a keyboard)
+</div>
+<div class="qt">
+<p>SetRes 1920x1080
+</div>
