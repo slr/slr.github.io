@@ -5,7 +5,11 @@
   <title>{{ site.name }}: {{ page.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <base target="_self">
+{%- if post.categories contains "bike" -%}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}/на колёсах" href="/atomic/bike/" />
+{%- else -%}
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/atomic/" />
+{%- endif -%}
   <link rel="stylesheet" type="text/css" href="/m.css">
   <script src="/m.js"></script>
 </head>
