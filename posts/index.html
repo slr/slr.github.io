@@ -5,13 +5,13 @@ title: Сёма Мрачный доведёт
 <main>
 <h1>{{ site.name }}</h1>
 <div lang="ru">
-<p class="qt cntrd"><strong>Сёма Mрачный</strong>: ты догоняешь?
+<p class="qt cntrd"><strong>{{ site.author.name }}</strong>: ты догоняешь?
 </div>
 <div lang="en">
-<p class="qt cntrd"><strong>Сёма Mрачный</strong>: do you follow?
+<p class="qt cntrd"><strong>{{ site.author.name }}</strong>: do you follow?
 </div>
 <div lang="es">
-<p class="qt cntrd"><strong>Сёма Mрачный</strong>: ¿me sigues?
+<p class="qt cntrd"><strong>{{ site.author.name }}</strong>: ¿me sigues?
 </div>
 <ul class="pl">
 {% for post in paginator.posts -%}
