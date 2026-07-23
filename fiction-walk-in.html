@@ -14,7 +14,7 @@ title: БЕСКОНЕЧНОСТИ ЧЕЛОВЕЧНОСТИ. ПОТЁМКИ
 и некоторые размышления на тему «как можно обрести разум и зачем его потерять».
 </div>
 <ul class="pl">
-{%- for post in site.posts -%}
+{%- for post in site.posts reversed -%}
 {%- if post.categories contains "walk-in" -%}
 <li>
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
