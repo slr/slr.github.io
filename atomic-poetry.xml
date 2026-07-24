@@ -1,12 +1,12 @@
 ---
-permalink: /atomic/bike/
-redirect_from: [/atomic-bike.xml, /atomic-bike/]
+permalink: /atomic/poetry/
+redirect_from: [/atomic-poetry.xml, /atomic-poetry/]
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-<title>{{ site.name }}/на колёсах</title>
-<link href="{{ site.url }}/atomic/bike/" rel="self" />
+<title>{{ site.name }}/стихи</title>
+<link href="{{ site.url }}/atomic/poetry/" rel="self" />
 <link href="{{ site.url }}/"/>
 <updated>{{ site.time | date_to_xmlschema }}</updated>
 <id>{{ site.url }}/</id>
@@ -15,7 +15,7 @@ layout: null
 <email>{{ site.author.email }}</email>
 </author>
   {%- for post in site.posts -%}
-{%- if post.categories contains "bike" -%}
+{%- if post.categories contains "poetry" -%}
 <entry>
 <title>{{ post.title }}</title>
 <link href="{{ site.url }}{{ post.url }}" />

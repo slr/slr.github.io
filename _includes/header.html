@@ -8,6 +8,10 @@
   <base target="_self">
 {%- if page.categories contains "bike" -%}
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }}/на колёсах" href="/atomic/bike/" />
+{%- elsif page.categories contains "fiction" -%}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}/проза" href="/atomic/fiction/" />
+{%- elsif page.categories contains "poetry" -%}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}/стихи" href="/atomic/poetry/" />
 {%- else -%}
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/atomic/" />
 {%- endif -%}
