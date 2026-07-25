@@ -17,7 +17,7 @@ layout: null
   {%- for post in site.posts -%}
 {%- if post.categories contains "poetry" -%}
 <entry>
-<title>{{ post.title }}</title>
+<title>{{ post.title | remove: "<br><br>" }}</title>
 <link href="{{ site.url }}{{ post.url }}" />
 <updated>{{ post.date | date_to_xmlschema }}</updated>
 <id>{{ site.url }}{{ post.id }}</id>
