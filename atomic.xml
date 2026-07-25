@@ -16,7 +16,7 @@ layout: null
 </author>
   {%- for post in site.posts -%}
 <entry>
-<title>{{ post.title | remove: "<br><br>" }}</title>
+<title>{{ post.title | replace: "<br><br>", " - " }}</title>
 <link href="{{ site.url }}{{ post.url }}" />
 <updated>{{ post.date | date_to_xmlschema }}</updated>
 <id>{{ site.url }}{{ post.id }}</id>
