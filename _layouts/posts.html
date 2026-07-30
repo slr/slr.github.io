@@ -3,7 +3,11 @@
 <article>
 <header>
 <h1>{{ page.title }}</h1>
+{%- if page.categories contains "walk-in" -%}
+<p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">~</time>
+{%- else -%}
 <p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
+{%- endif -%}
 </header>
 {{ content | strip }}
 <footer>
