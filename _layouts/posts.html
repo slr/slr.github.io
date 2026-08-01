@@ -4,7 +4,10 @@
 <header>
 <h1>{{ page.title }}</h1>
 {%- if page.categories contains "walk-in" -%}
-<p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">~</time>
+<p class="dt">
+<a href="/fiction/walk-in/" lang="ru">к содержанию</a>
+<a href="/fiction/walk-in/" lang="en">to Contents</a>
+<a href="/fiction/walk-in/" lang="es">al índice</a>
 {%- else -%}
 <p class="dt"><time datetime="{{ page.date | date: "%Y-%m-%d" }} 02:00">{{ page.date | date: "%Y.%m.%d" }}</time>
 {%- endif -%}
