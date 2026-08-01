@@ -184,4 +184,8 @@ main {
   #mc {
     margin: 2vh 5vw;
   }
+
+  #navTop {
+    margin-left: -3%;
+  }
 }
