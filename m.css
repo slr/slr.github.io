@@ -121,6 +121,11 @@ img {
   margin: 0.5vw;
 }
 
+#navTop {
+  margin-top: 2%;
+  margin-left: -6%;
+}
+
 #bye {
   display: flex;
   align-items: center;
