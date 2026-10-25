@@ -189,3 +189,8 @@ main {
     margin-left: -3%;
   }
 }
+
+@media print {
+  #navToolz, #navTop, #tags {
+    display: none;
+}
